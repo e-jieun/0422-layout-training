@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root">
+      <div id="con">
+        <div id="item">&lt;div&gt;</div>
+      </div>
+  </div>
+  <script>
+    // body 선택자를 불러온다
+    let body = document.querySelector('body');
+    // body 속성구조를 본다
+    console.dir(body);
+    // 콘솔에 body style log
+    console.log(body.style);
+    // body style
+    // margin: 0; padding: 0;
+    body.style.margin = 0;
+    body.style.padding = 0;
+    
+    // #root 에서 요소를 가져온다
+    const root = document.getElementById('root');
+    // #root 속성 구조를 본다
+    console.dir(root);
+    //콘솔에 #root style log
+    console.log(root.style);
+    // variable declaration
+    // 넓이값 단위 vw
+    let widthUnit = 'vw';
+    // 높이값 단위 vh
+    let heightUnit = 'vh';
+    let center = 'center';
+    // perUnit
+    let per = '%';
+    // $color-dg: dimgray;
+    let colorDg = 'dimgray';
+    // $color-f2: #f2f2f2;
+    let colorF2 = '#f2f2f2';
+    //#root.style
+    // width: 100vw; height: 100vh;
+    root.style.width = `100${widthUnit}`;
+    root.style.height = `100${heightUnit}`;
+    // 원 부분인 con을 화면(#root) 중앙에 배치
+    // display: flex; align-items: center; justify-content: center;
+    root.style.display = 'flex';
+    root.style.alignItems = center;
+    root.style.justifyContent = center;
+    
+    // #con 에서 요소를 가져온다
+    const con = document.getElementById('con');
+    // #con 속성 구조를 본다
+    console.dir(con);
+    // #con의 스타일 프로퍼티들을 콘솔에 기록한다
+    console.log(con.style);
+    // #con style
+    // width: 30vw; height: 30vw;
+    con.style.width = `15${widthUnit}`;
+    con.style.height = `15${widthUnit}`;
+    // border-radius: 50%;
+    con.style.borderRadius = `50${per}`;
+    con.style.backgroundColor = colorDg;
+    // #item의 '<div>' 요소를 원(#con) 중앙에 배치
+    // display: flex; align-items: center; justify-content: center;
+    con.style.display = 'flex';
+    con.style.alignItems = center;
+    con.style.justifyContent = center;
+
+    // #item에서 요소를 가져온다
+    const item = document.getElementById('item');
+    // #item의 속성 구조를 본다
+    console.dir(item);
+    // #item의 스타일 프로퍼티들을 콘솔에 기록한다
+    console.log(item.style);
+    // #item style
+    // color: #f2f2f2;
+    item.style.color = colorF2;
+  </script>
+</body>
+</html>
